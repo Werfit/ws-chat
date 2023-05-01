@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/logger": "0.0.1",
+    "@types/node": "18.16.1",
+    "dotenv": "16.0.3",
+    "nodemon": "2.0.22",
+    "simple-node-logger": "21.8.12",
+    "ts-node": "10.9.1",
+    "typescript": "5.0.4"
+  },
+  "dependencies": {
+    "socket.io": "4.6.1"
+  }
+}
