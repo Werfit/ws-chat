@@ -1,10 +1,11 @@
+import { useContext } from "react";
+
 import { AuthenticationContext } from "@/store/authentication";
 import { MessageProvider } from "@/store/messages";
 import { ErrorContext } from "@/store/error";
 
 import { Dialog } from "./dialog";
 import { Chat } from "./chat";
-import { useContext } from "react";
 import { Error } from "./error";
 
 const App = () => {

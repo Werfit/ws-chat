@@ -27,6 +27,13 @@ const ErrorProvider = ({ children }: ProviderProps) => {
   const [state, setState] = useState<ErrorState>(initialState);
 
   useEffect(() => {
+    socket.on(EventNames.connectionError, (error) =>
+      setState({
+        isError: true,
+        message: error.message,
+      })
+    );
+
     socket.on(EventNames.error, (message: string) =>
       setState({
         isError: true,

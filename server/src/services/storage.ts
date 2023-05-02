@@ -22,6 +22,10 @@ class Storage<T, K> {
   values(): K[] {
     return Array.from(this.#store.values());
   }
+
+  keys(): T[] {
+    return Array.from(this.#store.keys());
+  }
 }
 
 const users = new Storage<User["id"], User>();

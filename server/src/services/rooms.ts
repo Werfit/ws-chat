@@ -42,6 +42,12 @@ const deleteUserRoom = (userId: User["id"]) => {
   userRoomMap.delete(userId);
 };
 
+const getRoomUserIds = (roomId: Room["id"]) => {
+  return userRoomMap
+    .keys()
+    .filter((userId) => userRoomMap.get(userId) === roomId);
+};
+
 const joinUser = (roomId: Room["id"], user: User) => {
   if (!rooms.has(roomId)) {
     throw new Error(`Room with id [${roomId}] doesn't exist`);
@@ -57,4 +63,5 @@ export {
   deleteRoom,
   getRoomMessages,
   joinUser,
+  getRoomUserIds,
 };

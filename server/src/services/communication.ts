@@ -23,6 +23,7 @@ const authorize = (
   const room = getOrCreateRoom(roomId);
   const user = createUser(userId, username);
   joinUser(room.id, user);
+  return user;
 };
 
 const registerNewMessage = (

@@ -7,7 +7,10 @@ const EventNames = {
   outgoingMessage: "outgoing-message",
   ownIncomingMessage: "own-incoming-message",
   messagesStatus: "messages-status",
+  chatJoin: "chat-join",
+  chatUsers: "chat-users",
   error: "error",
+  connectionError: "connect_error",
 } as const;
 
 export { EventNames };
